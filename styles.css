@@ -1,32 +1,75 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    margin: 0;
 }
 
-.track-list {
+.player {
     background: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     width: 300px;
     text-align: center;
+    transition: all 0.3s ease;
+}
+
+.player:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.now-playing {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.controls {
+    margin: 10px 0;
+}
+
+button {
+    background: #9b59b6;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #8e44ad;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
 }
 
 .track-list ul {
     list-style-type: none;
     padding: 0;
+    margin: 10px 0;
 }
 
 .track-list li {
     padding: 10px;
     cursor: pointer;
     border-bottom: 1px solid #ddd;
+    transition: background 0.3s ease;
 }
 
 .track-list li:hover {
     background-color: #f0f0f0;
+}
+
+.track-list li.active {
+    background-color: #9b59b6;
+    color: #fff;
 }
